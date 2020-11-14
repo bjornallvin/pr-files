@@ -1,0 +1,21 @@
+<%- include('header'); %>
+
+<p><strong>Title:</strong> <%= pr.title %></p>
+<p><strong>Number:</strong> <%= pr.number %></p>
+<p><strong>Author:</strong> <%= pr.author %></p>
+<table class="table-auto">
+    <thead>
+        <tr>
+            <th class="px-4 py-2">File</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% pr.files.forEach(function(file) { %>
+        <tr>
+            <td class="border px-4 py-2"><%= file %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<%- include('footer'); %>

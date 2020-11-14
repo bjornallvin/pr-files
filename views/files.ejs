@@ -1,0 +1,14 @@
+<%- include('header'); %>
+
+<div class="pl-10">
+    <% filteredFiles.forEach(function(file) { %>
+    <div class="text-<%= file.color %>-700">
+        <%= file.filename %> <strong>
+            <% file.number.forEach(number => { %>
+            <a href="/<%= number %>"><%= number %></a>
+            <% }); %></strong>
+    </div>
+    <% }); %>
+</div>
+
+<%- include('footer'); %>
